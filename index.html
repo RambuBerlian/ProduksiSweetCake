@@ -4,15 +4,15 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Sweet Cake</title>  
-    <link rel="stylesheet" href="C:\Users\Berlian\OneDrive\Documents\WEB_BERLIAN[1]\WEB_BERLIAN\style.css">  
+    <link rel="stylesheet" href="style.css">  
 </head>  
 <body>  
     <div id="home">  
         <div class="container">  
             <div class="header">  
                 <div class="logo">  
-                    <img src="C:\Users\Berlian\OneDrive\Documents\WEB_BERLIAN[1]\WEB_BERLIAN\cake1.jpg" alt="Sweet Cake Logo">  
-                </div>  
+                    <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake1.jpg" alt="Sweet Cake Logo">  
+                </div> 
                 <div class="nav">  
                     <a href="#" id="home-link">Home</a>  
                     <a href="#" id="about-us-link">About Us</a>  
@@ -25,10 +25,10 @@
             </div>  
             <div class="cakes">  
                 <div class="cake" style="position: absolute; top: 38%; left: 27%; transform: translate(-50%, -50%);">  
-                    <img src="C:\Users\Berlian\OneDrive\Documents\WEB_BERLIAN[1]\WEB_BERLIAN\C1.png" alt="Cupcake" class="cake-image">  
+                    <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/C1.png" alt="Cupcake" class="cake-image">  
                 </div>  
                 <div class="cake" style="position: absolute; top: 38%; left: 69%; transform: translate(-50%, -50%);">  
-                    <img src="C:\Users\Berlian\OneDrive\Documents\WEB_BERLIAN[1]\WEB_BERLIAN\C2.png" alt="Cake" class="cake-image">  
+                    <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/C2.png" alt="Cake" class="cake-image">  
                 </div>  
                
             </div>  
@@ -36,16 +36,25 @@
         </div>  
     </div>  
 
-    <!-- Bagian Login -->  
+    <!-- Bagian Login --> 
     <div id="login" style="display:none;">  
         <div class="container">  
             <h2>LOGIN</h2>  
-            <input type="text" placeholder="Username" id="username">  
-            <input type="password" placeholder="Password" id="password">  
+            <input type="text" id="username" placeholder="Username">  
+            <input type="password" id="password" placeholder="Password">  
+            
+            <!-- Checkbox untuk verifikasi manusia -->
+            <div id="captcha">
+                <input type="checkbox" id="human-check">
+                <label for="human-check">Saya bukan robot</label>
+            </div>
+    
             <p class="forgot-password">Forgot Password?</p>  
-            <button id="sign-in">SIGN IN</button>  
-            <p class="register-link">Don't have an account? <a href="#" id="register-link">Register here</a></p>  
+            <button id="sign-in" onclick="login()">SIGN IN</button>
+            <p class="register-link">Don't have an account? <a href="#" id="register-link">Register here</a></p>
         </div>  
+    
+        <div id="snackbar" style="display:none; position:fixed; bottom:10px; left:50%; transform:translateX(-50%); background-color:green; color:white; padding:10px; border-radius:5px;"></div>
     </div>  
 
     <!-- Bagian Create Account (Register) -->  
@@ -74,7 +83,7 @@
         <div class="container">  
             <div class="header">  
                 <div class="logo">  
-                    <img src="C:\Users\Berlian\OneDrive\Documents\WEB_BERLIAN[1]\WEB_BERLIAN\cake1.jpg" alt="Sweet Cake Logo">  
+                    <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake1.jpg" alt="Sweet Cake Logo">  
                 </div>  
                 <div class="nav">  
                     <a href="#home" id="home-link">Home</a>  
@@ -87,25 +96,25 @@
             </div>  
             <div class="products">  
                 <div class="product">  
-                    <img src="C:\Users\Berlian\OneDrive\Documents\WEB_BERLIAN[1]\WEB_BERLIAN\cake3.jpg" alt="Cupcake">  
+                    <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake3.jpg" alt="Cupcake">  
                     <h3>Sweet Cake Beige Cupcakes</h3>  
                     <p>Rp. 35.500,00</p>  
                     <a href="#" class="add">Add</a>  
                 </div>  
                 <div class="product">  
-                    <img src="C:\Users\Berlian\OneDrive\Documents\WEB_BERLIAN[1]\WEB_BERLIAN\cake7.jpg" alt="Cookies">  
+                    <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake7.jpg" alt="Cookies">  
                     <h3>Sweet Cake Chocolate Chip Cookies</h3>  
                     <p>Rp. 15.000,00</p>  
                     <a href="#" class="add">Add</a>  
                 </div>  
                 <div class="product">  
-                    <img src="C:\Users\Berlian\Downloads\WEB_BERLIAN[1]\WEB_BERLIAN\cake5.jpg" alt="Cake">  
+                    <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake5.jpg" alt="Cake">  
                     <h3>Sweet Cake Pink Cake</h3>  
                     <p>Rp. 80.000,00</p>  
                     <a href="#" class="add">Add</a>  
                 </div>  
                 <div class="product">  
-                    <img src="C:\Users\Berlian\OneDrive\Documents\WEB_BERLIAN[1]\WEB_BERLIAN\cake6.jpg" alt="Cheesecake">  
+                    <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake6.jpg" alt="Cheesecake">  
                     <h3>Sweet Cake Blueberry Cheesecake</h3>  
                     <p>Rp. 28.000,00</p>  
                     <a href="#" class="add">Add</a>  
@@ -120,7 +129,7 @@
         <div class="container">  
             <div class="header">  
                 <div class="logo">  
-                    <img src="C:\Users\Berlian\OneDrive\Documents\WEB_BERLIAN[1]\WEB_BERLIAN\cake1.jpg" alt="Sweet Cake Logo">  
+                    <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake1.jpg" alt="Sweet Cake Logo">  
                 </div>  
                 <div class="nav">  
                     <a href="#home" id="home-link">Home</a>  
@@ -235,8 +244,8 @@
         const transactionForm = document.getElementById('transactionForm');
 
         transactionLink.addEventListener('click', () => {
-            productsSection.style.display = 'none';
-            transactionSection.style.display = 'block';
+        productsSection.style.display = 'none'; 
+        transactionSection.style.display = 'block';
         });
 
         tambahDataButton.addEventListener('click', () => {
@@ -285,9 +294,35 @@
                 }
             }
         });
+        function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const humanCheck = document.getElementById('human-check').checked; // Memeriksa status checkbox
 
-        
+        if (username && password) {
+            if (humanCheck) { // Memverifikasi apakah checkbox dicentang
+            const snackbar = document.getElementById('snackbar');
 
+            // Sembunyikan snackbar sebelumnya jika ada
+            if (snackbar.style.display === 'block') {
+                clearTimeout(snackbarTimeout); 
+            }
+
+            snackbar.style.display = 'block';
+            snackbar.textContent = `Login berhasil! Username: ${username}`;
+
+            snackbarTimeout = setTimeout(() => {
+                snackbar.style.display = 'none';
+                loginSection.style.display = 'none';  
+                productsSection.style.display = 'block';  
+            }, 3000);
+        } else {
+            alert('Mohon centang bahwa Anda bukan robot!'); // Pesan jika checkbox tidak dicentang
+        }
+        } else {
+        alert('Mohon masukkan username dan password!');
+        }
+    }
     </script>  
 </body>  
 </html>

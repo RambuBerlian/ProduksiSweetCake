@@ -12,20 +12,21 @@
             background-color: #f5f5f5;  
             color: #333;  
         }  
-
+        
         .container {  
             max-width: 1200px;  
             margin: 0 auto;  
             padding: 20px;  
-            display: flex;  
-            justify-content: space-between;  
-            align-items: center;  
         }  
 
         .header {  
             display: flex;  
             align-items: center;  
-        }  
+            justify-content: space-between;  
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+        }   
 
         .logo {  
             margin-right: 20px;  
@@ -41,15 +42,44 @@
         }  
 
         .nav a {  
+            color: #f70070;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }  
+
+        .nav a:hover {
+            background-color: #f70070;
+            color: #fff;
+        }
+
+        .content {  
+            text-align: center;  
+            margin-top: 50px;  
+        }  
+
+        h1 {  
+            font-size: 3em;  
+            margin-bottom: 20px;  
+        }  
+
+        .button {  
+            display: inline-block;  
+            padding: 10px 20px;  
+            background-color: #f70070;  
+            color: #fff;  
             text-decoration: none;  
-            color: #333;  
-            margin-right: 20px;  
+            border-radius: 5px;  
+            margin-top: 20px;  
         }  
 
         .products {  
             display: flex;  
             justify-content: space-between;  
             margin-top: 50px;  
+            flex-wrap: wrap;  
         }  
 
         .product {  
@@ -59,17 +89,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
             text-align: center;  
             width: 23%;  
+            margin-bottom: 20px;  
         }  
 
         .product img {  
             width: 100%;  
             height: auto;  
             margin-bottom: 10px;  
+            border-radius: 10px;  
         }  
 
         .product h3 {  
             margin-bottom: 5px;  
-            font-size: 1.2em;  
+            font-size: 1.2em; 
+            color: #f70070;  
         }  
 
         .product p {  
@@ -92,6 +125,27 @@
             margin-top: 50px;  
             font-size: 0.8em;  
         }  
+
+        .cakes {  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            margin-top: 50px;  
+        }  
+
+        .cake {  
+            margin: 0 20px;  
+        }  
+
+        .cake img {  
+            width: 150px;  
+            height: auto;  
+        }  
+
+        .cake-image {
+            width: 10px;  /* Ubah nilai ini untuk memperkecil atau memperbesar gambar */
+            height: auto;  /* Menjaga proporsi gambar */
+        }
 
         .about-us {  
             margin-top: 50px;  
@@ -161,37 +215,46 @@
     <div class="container">  
         <div class="header">  
             <div class="logo">  
-                <img src="https://i.imgur.com/2QzPq3d.png" alt="Sweet Cake Logo">  
+                <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake1.jpg" alt="Sweet Cake Logo">  
             </div>  
             <div class="nav">  
                 <a href="#home" id="home-link">Home</a>  
                 <a href="#products" id="products-link">Products</a>  
                 <a href="#about-us" id="about-us-link">About Us</a>  
                 <a href="#contact" id="contact-link">Contact</a>  
+                <a href="#transaction" id="transaction-link">Transaction</a>  
+                <a href="#" id="logout-link">Log Out</a>  
             </div>  
         </div>  
     </div>  
+
+     <!-- Elemen untuk menampilkan greeting dan waktu -->
+     <div class="home-content">
+        <h2 id="text"></h2>
+        <h3 id="date"></h3>
+    </div>
+
     <div class="products" id="products">  
         <div class="product">  
-            <img src="D:\test\cake3.jpg" alt="Cupcake">  
+            <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake3.jpg" alt="Cupcake">   
             <h3>Sweet Cake Beige Cupcakes</h3>  
             <p>Rp. 35.500.00</p>  
             <a href="#" class="add">Add</a>  
         </div>  
         <div class="product">  
-            <img src="D:\test\cake7.jpg" alt="Cookies">  
+            <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake7.jpg" alt="Cookies">  
             <h3>Sweet Cake Chocolate Chip Cookies</h3>  
             <p>Rp. 15.000.00</p>  
             <a href="#" class="add">Add</a>  
         </div>  
         <div class="product">  
-            <img src="D:\test\cake5.jpg" alt="Cake">  
+            <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake5.jpg" alt="Cake">  
             <h3>Sweet Cake Pink Cake</h3>  
             <p>Rp. 80.000.00</p>  
             <a href="#" class="add">Add</a>  
         </div>  
         <div class="product">  
-            <img src="D:\test\cake6.jpg" alt="Cheesecake">  
+            <img src="C:/Users/Berlian/Downloads/WEB_BERLIAN[1]/WEB_BERLIAN/cake6.jpg" alt="Cheesecake">   
             <h3>Sweet Cake Blueberry Cheesecake</h3>  
             <p>Rp. 28.000.00</p>  
             <a href="#" class="add">Add</a>  
@@ -211,6 +274,7 @@
             <li>Alamat: Jl. Sudirman No. 123, Jakarta Selatan</li>  
         </ul>  
     </div>  
+
     <div class="footer">  
         © sweet cakeshop 2024  
     </div>  
@@ -220,7 +284,9 @@
         const homeLink = document.getElementById('home-link');  
         const productsLink = document.getElementById('products-link');  
         const aboutUsLink = document.getElementById('about-us-link');  
-        const contactLink = document.getElementById('contact-link');  
+        const contactLink = document.getElementById('contact-link');
+        const transactionLink = document.getElementById('transaction-link');
+        const logoutLink = document.getElementById('logout-link');   
         const backToTop = document.getElementById('back-to-top');  
 
         homeLink.addEventListener('click', () => {  
@@ -239,6 +305,21 @@
             window.location.hash = 'contact';  
         });  
 
+        transactionLink.addEventListener('click', function(event) {  
+            event.preventDefault();  
+            const transactionSection = document.getElementById('transaction');  
+            transactionSection.scrollIntoView({ behavior: 'smooth' });  
+        });  
+
+        logoutLink.addEventListener('click', function(event) {  
+            event.preventDefault();  
+            let confirmLogout = confirm("Apakah anda yakin untuk logout?");
+            if (confirmLogout) {
+                // Redirect ke halaman index.html
+                window.location.href = 'index.html';
+            } 
+        });  
+
         window.addEventListener('scroll', () => {  
             if (window.pageYOffset > 100) {  
                 backToTop.style.display = 'block';  
@@ -252,7 +333,47 @@
                 top: 0,  
                 behavior: 'smooth'  
             });  
-        });  
+        });
+
+        // Fungsi untuk menampilkan waktu
+        function myFunction() {  
+            const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];  
+            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];  
+            const date = new Date();  
+            let jam = date.getHours();  
+            let tanggal = date.getDate();  
+            let hari = days[date.getDay()];  
+            let bulan = months[date.getMonth()];  
+            let tahun = date.getFullYear();  
+
+            let m = checkTime(date.getMinutes());  
+            let s = checkTime(date.getSeconds());  
+
+            document.getElementById("date").innerHTML = `${hari}, ${tanggal} ${bulan} ${tahun}, ${jam}:${m}:${s}`;  
+            requestAnimationFrame(myFunction);  
+        }  
+
+        function checkTime(i) {  
+            return i < 10 ? "0" + i : i;  
+        }  
+
+        // Pop-up greeting berdasarkan waktu
+        window.onload = function () {  
+            let nama = prompt("Masukkan Nama Anda:", "Admin");  
+            let jam = new Date().getHours();  
+            if (nama != null) {  
+                if (jam >= 4 && jam <= 10) {  
+                    document.getElementById("text").innerHTML = `Selamat Pagi, ${nama}!`;  
+                } else if (jam >= 11 && jam <= 14) {  
+                    document.getElementById("text").innerHTML = `Selamat Siang, ${nama}!`;  
+                } else if (jam >= 15 && jam <= 18) {  
+                    document.getElementById("text").innerHTML = `Selamat Sore, ${nama}!`;  
+                } else {  
+                    document.getElementById("text").innerHTML = `Selamat Malam, ${nama}!`;  
+                }  
+            }  
+            myFunction();  
+        };  
     </script>  
 </body>  
 </html>
